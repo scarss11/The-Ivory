@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ivory - Sophisticated Barranquilla Cuisine</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1 class="logo-text">The Ivory</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+                <a href="#about" class="nav-link" data-page="about">About</a>
+                <a href="#menu" class="nav-link" data-page="menu">Menu</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            </div>
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section class="page active" id="home-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sophisticated Barranquilla Cuisine</h1>
+                    <p class="hero-subtitle">Experience the refined flavors of coastal Colombia at The Ivory</p>
+                    <button class="cta-button" onclick="navigateToPage('menu')">
+                        <span>Explore Menu</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <div class="card-image-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.58L19 8l-9 9z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h3>Premium Experience</h3>
+                        <p>Curated flavors from Barranquilla's finest ingredients</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="features-container">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Chef Hat Icon - Replace with actual icon -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2c2.21 0 4 1.79 4 4 0 .74-.2 1.43-.55 2.03L16 8c1.1 0 2 .9 2 2v9c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-9c0-1.1.9-2 2-2l.55-.03C8.2 7.43 8 6.74 8 6c0-2.21 1.79-4 4-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Master Chefs</h3>
+                        <p>Expert culinary artisans bringing authentic Caribbean flavors to life</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Premium Ingredients Icon - Replace with actual icon -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Premium Ingredients</h3>
+                        <p>Sourced from the finest local markets and coastal waters</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Elegant Dining Icon - Replace with actual icon -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5l3.5 2.5L12 18.5 8.5 16z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Elegant Ambiance</h3>
+                        <p>Sophisticated atmosphere perfect for memorable dining experiences</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Page -->
+        <section class="page" id="about-page">
+            <div class="page-container">
+                <h2 class="page-title">About The Ivory</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">Located in the heart of Barranquilla, The Ivory represents the pinnacle of Caribbean coastal cuisine, where traditional flavors meet contemporary sophistication.</p>
+                        <p>Our commitment to excellence drives every aspect of our culinary journey, from the careful selection of the freshest ingredients from local markets to the artful presentation of each dish. We celebrate the rich gastronomic heritage of Barranquilla while embracing modern culinary techniques.</p>
+                        <p>At The Ivory, we believe that dining is an experience that engages all the senses, creating memories that last a lifetime.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Happy Guests Daily</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>25+</h3>
+                            <p>Signature Dishes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Page -->
+        <section class="page" id="menu-page">
+            <div class="page-container">
+                <h2 class="page-title">Our Signature Menu</h2>
+                <p class="page-subtitle">Discover the sophisticated flavors of Barranquilla</p>
+                
+                <div class="dishes-grid">
+                    <!-- Dish 1 -->
+                    <div class="dish-card" onclick="openDishDetail('cazuela-de-mariscos')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Seafood Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2zm0 2c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Cazuela de Mariscos</h3>
+                            <p class="dish-description">Premium seafood casserole with coastal spices</p>
+                            <span class="dish-price">$45</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dish 2 -->
+                    <div class="dish-card" onclick="openDishDetail('pargo-rojo-grillado')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Fish Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6zm0 3a2.5 2.5 0 000 5 2.5 2.5 0 000-5z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Pargo Rojo Grillado</h3>
+                            <p class="dish-description">Grilled red snapper with Caribbean herbs</p>
+                            <span class="dish-price">$38</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dish 3 -->
+                    <div class="dish-card" onclick="openDishDetail('arroz-con-coco-negro')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Rice Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.04-.17 2.04-.47 3-1 5.16-1 9-5.45 9-11V7l-10-5z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Arroz con Coco Negro</h3>
+                            <p class="dish-description">Black coconut rice with premium ingredients</p>
+                            <span class="dish-price">$28</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dish 4 -->
+                    <div class="dish-card" onclick="openDishDetail('ceviche-tropical')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Citrus Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/>
+                                    <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Ceviche Tropical</h3>
+                            <p class="dish-description">Fresh seafood marinated in tropical citrus</p>
+                            <span class="dish-price">$32</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dish 5 -->
+                    <div class="dish-card" onclick="openDishDetail('sancocho-de-gallina')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Soup Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 18h10l4-4V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8l4 4z" fill="currentColor" opacity="0.1"/>
+                                    <path d="M7 18h10l4-4V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8l4 4z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Sancocho de Gallina</h3>
+                            <p class="dish-description">Traditional chicken stew elevated with premium ingredients</p>
+                            <span class="dish-price">$35</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dish 6 -->
+                    <div class="dish-card" onclick="openDishDetail('langostinos-al-ajillo')">
+                        <div class="dish-image">
+                            <div class="image-placeholder">
+                                <!-- Shrimp Icon - Replace with actual image -->
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2c5.5 0 10 4.5 10 10 0 2.8-1.2 5.3-3.1 7.1L12 22l-6.9-2.9C3.2 17.3 2 14.8 2 12 2 6.5 6.5 2 12 2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Langostinos al Ajillo</h3>
+                            <p class="dish-description">Garlic prawns with coastal herbs and spices</p>
+                            <span class="dish-price">$42</span>
+                        </div>
+                        <div class="dish-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section class="page" id="contact-page">
+            <div class="page-container">
+                <h2 class="page-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Visit Us</h3>
+                            <p>Carrera 52 #76-45<br>Barranquilla, Colombia</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Call Us</h3>
+                            <p>+57 5 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>reservations@theivory.co</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Hours</h3>
+                            <p>Mon-Thu: 6:00 PM - 11:00 PM<br>Fri-Sat: 6:00 PM - 12:00 AM<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dish Detail Modal -->
+    <div class="modal" id="dish-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeDishDetail()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/dishDetails.js"></script>
+</body>
+</html>
