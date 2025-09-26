@@ -1,0 +1,52 @@
+/* dishes/styles.css - small overrides to style dish pages like the Figma guide
+   This file is intended to be loaded after ../styles/main.css and should
+   only contain refinements specific to dish pages. */
+
+.dish-page-wide {
+  max-width: 1200px;
+  padding: 3.5rem 1rem;
+}
+
+.dish-detail-header {
+  gap: 2.5rem;
+}
+
+.dish-detail-image img {
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+}
+
+.dish-detail-image img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.dish-detail-name {
+  font-family: 'Playfair Display', serif;
+  color: #0b2b4a;
+  letter-spacing: -0.5px;
+}
+
+.dish-meta {
+  color: #6b7280;
+}
+
+.dish-description p {
+  color: #4b5563;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dish-actions .btn {
+  padding: 0.85rem 1.2rem;
+}
+
+/* subtle border on sections to separate content visually */
+.dish-section {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+@media (max-width: 900px) {
+  .dish-detail-image img { height: 260px; }
+}

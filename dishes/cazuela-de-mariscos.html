@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cazuela de Mariscos — The Ivory</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><h1 class="logo-text">The Ivory</h1></div>
+      <div class="nav-menu">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#menu" class="nav-link">Menu</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <div id="dish-root" class="dish-page"></div>
+  </main>
+
+  <script src="../scripts/dishDetails.js"></script>
+  <script>
+    (function() {
+      const dishId = 'cazuela-de-mariscos';
+      if (!window.dishManager) window.dishManager = new DishDetailsManager();
+      document.getElementById('dish-root').innerHTML = window.dishManager.generateDishDetailHTML(dishId);
+    })();
+  </script>
+</body>
+</html>

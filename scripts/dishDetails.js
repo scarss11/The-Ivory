@@ -13,6 +13,7 @@ class DishDetailsManager {
   initializeDishes() {
     return {
       'cazuela-de-mariscos': {
+        image: 'images/dishes/cazuela-mariscos.jpg',
         id: 'cazuela-de-mariscos',
         name: 'Cazuela de Mariscos Ivory',
         price: 45,
@@ -54,6 +55,7 @@ class DishDetailsManager {
       },
 
       'pargo-rojo-grillado': {
+        image: 'images/dishes/pargo-rojo.jpg',
         id: 'pargo-rojo-grillado',
         name: 'Pargo Rojo Grillado Caribe',
         price: 38,
@@ -95,6 +97,7 @@ class DishDetailsManager {
       },
 
       'arroz-con-coco-negro': {
+        image: 'images/dishes/arroz-coco-negro.jpg',
         id: 'arroz-con-coco-negro',
         name: 'Arroz con Coco Negro Gourmet',
         price: 28,
@@ -136,6 +139,7 @@ class DishDetailsManager {
       },
 
       'ceviche-tropical': {
+        image: 'images/dishes/ceviche-tropical.jpg',
         id: 'ceviche-tropical',
         name: 'Ceviche Tropical Ivory',
         price: 32,
@@ -177,6 +181,7 @@ class DishDetailsManager {
       },
 
       'sancocho-de-gallina': {
+        image: 'images/dishes/sancocho-gallina.jpg',
         id: 'sancocho-de-gallina',
         name: 'Sancocho de Gallina Premium',
         price: 35,
@@ -218,6 +223,7 @@ class DishDetailsManager {
       },
 
       'langostinos-al-ajillo': {
+        image: 'images/dishes/langostinos-ajillo.jpg',
         id: 'langostinos-al-ajillo',
         name: 'Langostinos al Ajillo Mediterráneo',
         price: 42,
@@ -314,51 +320,41 @@ class DishDetailsManager {
     }
 
     return `
-      <div class="dish-detail">
+      <div class="dish-detail dish-page-wide">
         <div class="dish-detail-header">
           <div class="dish-detail-image">
-            <div class="image-placeholder" data-dish="${dishId}">
-              <!-- Replace this SVG with actual dish image -->
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-                <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <div class="image-overlay">
-                <span>Click to upload image</span>
-              </div>
-            </div>
+            <img src="${dish.image}" alt="${dish.name}" />
           </div>
-          
+
           <div class="dish-detail-info">
             <div class="dish-category">${dish.category}</div>
-            <h2 class="dish-detail-name">${dish.name}</h2>
+            <h1 class="dish-detail-name">${dish.name}</h1>
             <div class="dish-meta">
-              <span class="dish-price">${dish.price}</span>
+              <span class="dish-price">$${dish.price}</span>
               <span class="dish-time">⏱️ ${dish.preparationTime}</span>
               <span class="dish-serving">👥 ${dish.servingSize}</span>
               <span class="dish-spice">🌶️ ${dish.spiceLevel}</span>
             </div>
+            <p class="lead">${dish.shortDescription}</p>
           </div>
         </div>
-        
+
         <div class="dish-detail-body">
           <div class="dish-description">
-            <h3>Description</h3>
+            <h2>Description</h2>
             <p>${dish.fullDescription}</p>
           </div>
-          
+
           <div class="dish-sections">
             <div class="dish-section">
-              <h4>Premium Ingredients</h4>
-              <div class="ingredients-grid">
-                ${dish.ingredients.map(ingredient => 
-                  `<div class="ingredient-tag">${ingredient}</div>`
-                ).join('')}
-              </div>
+              <h3>Premium Ingredients</h3>
+              <ul class="ingredients-list">
+                ${dish.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+              </ul>
             </div>
-            
+
             <div class="dish-section">
-              <h4>Nutritional Information</h4>
+              <h3>Nutritional Information</h3>
               <div class="nutrition-grid">
                 ${Object.entries(dish.nutritionalInfo).map(([key, value]) => 
                   `<div class="nutrition-item">
@@ -368,59 +364,41 @@ class DishDetailsManager {
                 ).join('')}
               </div>
             </div>
-            
+
             ${dish.wineParings ? `
               <div class="dish-section">
-                <h4>Wine Pairings</h4>
-                <div class="pairing-list">
-                  ${dish.wineParings.map(pairing => 
-                    `<div class="pairing-item">🍷 ${pairing}</div>`
-                  ).join('')}
-                </div>
+                <h3>Wine Pairings</h3>
+                <ul class="pairing-list">
+                  ${dish.wineParings.map(pairing => `<li>${pairing}</li>`).join('')}
+                </ul>
               </div>
             ` : ''}
-            
+
             <div class="dish-section">
-              <h4>Dietary Information</h4>
+              <h3>Dietary Information</h3>
               <div class="dietary-info">
-                <div class="allergens">
-                  <strong>Allergens:</strong> 
-                  ${dish.allergens.length > 0 ? dish.allergens.join(', ') : 'None'}
-                </div>
-                <div class="dietary-options">
-                  <strong>Options:</strong> 
-                  ${dish.dietaryOptions.join(', ')}
-                </div>
+                <div class="allergens"><strong>Allergens:</strong> ${dish.allergens.length > 0 ? dish.allergens.join(', ') : 'None'}</div>
+                <div class="dietary-options"><strong>Options:</strong> ${dish.dietaryOptions.join(', ')}</div>
               </div>
             </div>
-            
+
             <div class="dish-section chef-section">
-              <h4>Chef's Notes</h4>
-              <div class="chef-notes">
-                <p><em>"${dish.chefNotes}"</em></p>
-              </div>
+              <h3>Chef's Notes</h3>
+              <div class="chef-notes"><p><em>"${dish.chefNotes}"</em></p></div>
             </div>
-            
+
             <div class="dish-section origin-section">
-              <h4>Origin & Tradition</h4>
-              <div class="dish-origin">
-                <p>${dish.origin}</p>
-              </div>
+              <h3>Origin & Tradition</h3>
+              <div class="dish-origin"><p>${dish.origin}</p></div>
             </div>
           </div>
         </div>
-        
+
         <div class="dish-detail-footer">
           <div class="dish-actions">
-            <button class="btn btn-primary" onclick="DishDetailsManager.addToOrder('${dishId}')">
-              Add to Order
-            </button>
-            <button class="btn btn-outline" onclick="DishDetailsManager.shareDish('${dishId}')">
-              Share Dish
-            </button>
-            <button class="btn btn-ghost" onclick="DishDetailsManager.saveFavorite('${dishId}')">
-              ❤️ Save
-            </button>
+            <button class="btn btn-primary" onclick="DishDetailsManager.addToOrder('${dishId}')">Add to Order</button>
+            <button class="btn btn-outline" onclick="DishDetailsManager.shareDish('${dishId}')">Share Dish</button>
+            <a class="btn btn-ghost" href="index.html#menu">← Back to Menu</a>
           </div>
         </div>
       </div>

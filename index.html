@@ -59,6 +59,67 @@
                 </div>
             </section>
 
+            <!-- Our Dishes (moved here from menu) -->
+            <section class="home-dishes">
+                <div class="page-container">
+                    <h2 class="page-title">Our Dishes</h2>
+                    <p class="page-subtitle">A selection of signature plates crafted with coastal ingredients</p>
+
+                    <h3 class="section-subtitle">Our Dishes</h3>
+
+                    <div class="dishes-cards wide">
+                        <!-- Visual cards with images (same as menu) -->
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/cazuela-mariscos.jpg" alt="Cazuela de Mariscos" />
+                            <div class="dish-card-visual-info">
+                                <h4>Cazuela de Mariscos</h4>
+                                <p>Premium seafood casserole with coastal spices and rich broth.</p>
+                            </div>
+                        </div>
+
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/pargo-rojo.jpg" alt="Pargo Rojo Grillado" />
+                            <div class="dish-card-visual-info">
+                                <h4>Pargo Rojo Grillado</h4>
+                                <p>Grilled red snapper seasoned with Caribbean herbs.</p>
+                            </div>
+                        </div>
+
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/arroz-coco-negro.jpg" alt="Arroz con Coco Negro" />
+                            <div class="dish-card-visual-info">
+                                <h4>Arroz con Coco Negro</h4>
+                                <p>Black coconut rice with fragrant spices and toasted coconut.</p>
+                            </div>
+                        </div>
+
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/ceviche-tropical.jpg" alt="Ceviche Tropical" />
+                            <div class="dish-card-visual-info">
+                                <h4>Ceviche Tropical</h4>
+                                <p>Fresh seafood marinated in tropical citrus and herbs.</p>
+                            </div>
+                        </div>
+
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/sancocho-gallina.jpg" alt="Sancocho de Gallina" />
+                            <div class="dish-card-visual-info">
+                                <h4>Sancocho de Gallina</h4>
+                                <p>Hearty traditional chicken stew with premium ingredients.</p>
+                            </div>
+                        </div>
+
+                        <div class="dish-card-visual">
+                            <img src="images/dishes/langostinos-ajillo.jpg" alt="Langostinos al Ajillo" />
+                            <div class="dish-card-visual-info">
+                                <h4>Langostinos al Ajillo</h4>
+                                <p>Garlic prawns sautéed with coastal herbs and spices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Features Section -->
             <section class="features">
                 <div class="features-container">
@@ -130,9 +191,11 @@
                 <h2 class="page-title">Our Signature Menu</h2>
                 <p class="page-subtitle">Discover the sophisticated flavors of Barranquilla</p>
                 
+                <!-- Visual cards removed from menu (moved to Home) -->
+
                 <div class="dishes-grid">
                     <!-- Dish 1 -->
-                    <div class="dish-card" onclick="openDishDetail('cazuela-de-mariscos')">
+                    <a class="dish-card" href="dishes/cazuela-de-mariscos.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Seafood Icon - Replace with actual image -->
@@ -151,10 +214,10 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Dish 2 -->
-                    <div class="dish-card" onclick="openDishDetail('pargo-rojo-grillado')">
+                    <a class="dish-card" href="dishes/pargo-rojo-grillado.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Fish Icon - Replace with actual image -->
@@ -173,10 +236,10 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Dish 3 -->
-                    <div class="dish-card" onclick="openDishDetail('arroz-con-coco-negro')">
+                    <a class="dish-card" href="dishes/arroz-con-coco-negro.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Rice Icon - Replace with actual image -->
@@ -195,10 +258,10 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Dish 4 -->
-                    <div class="dish-card" onclick="openDishDetail('ceviche-tropical')">
+                    <a class="dish-card" href="dishes/ceviche-tropical.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Citrus Icon - Replace with actual image -->
@@ -218,10 +281,10 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Dish 5 -->
-                    <div class="dish-card" onclick="openDishDetail('sancocho-de-gallina')">
+                    <a class="dish-card" href="dishes/sancocho-de-gallina.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Soup Icon - Replace with actual image -->
@@ -241,10 +304,10 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Dish 6 -->
-                    <div class="dish-card" onclick="openDishDetail('langostinos-al-ajillo')">
+                    <a class="dish-card" href="dishes/langostinos-al-ajillo.html">
                         <div class="dish-image">
                             <div class="image-placeholder">
                                 <!-- Shrimp Icon - Replace with actual image -->
@@ -263,7 +326,7 @@
                                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
