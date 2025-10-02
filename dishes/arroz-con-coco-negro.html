@@ -1,35 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arroz con Coco Negro — The Ivory</title>
-  <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arroz con Coco Negro — The Ivory</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo"><h1 class="logo-text">The Ivory</h1></div>
-      <div class="nav-menu">
-        <a href="../index.html#home" class="nav-link">Home</a>
-        <a href="../index.html#menu" class="nav-link">Menu</a>
-        <a href="../index.html#contact" class="nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1 class="logo-text">The Ivory</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link"><i class="fa-solid fa-utensils"></i> Home</a>
+                <a href="../index.html#menu" class="nav-link"><i class="fa-solid fa-utensils"></i> Menu</a>
+                <a href="../index.html#contact" class="nav-link"><i class="fa-solid fa-utensils"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
 
-  <main class="page-container">
-    <div id="dish-root" class="dish-page"></div>
-  </main>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero dish-hero">
+            <div class="hero-content">
+                <div class="dish-category">Caribbean Classics</div>
+                <h1 class="hero-title">Arroz con Coco Negro</h1>
+                <p class="hero-subtitle">Authentic black coconut rice with coastal tradition</p>
+                <div class="dish-meta-hero">
+                    <span class="meta-item"><i class="fa-solid fa-clock"></i> 40-45 minutes</span>
+                    <span class="meta-item"><i class="fa-solid fa-users"></i> 4 people</span>
+                    <span class="meta-item"><i class="fa-solid fa-fire"></i> Medium</span>
+                    <span class="meta-item price">$28</span>
+                </div>
+            </div>
+            <div class="hero-image dish-hero-image">
+                <img src="../images/dishes/ArrozCoco.png" alt="Arroz con Coco Negro" />
+            </div>
+        </section>
 
-  <script src="../scripts/dishDetails.js"></script>
-  <script>
-    (function() {
-      const dishId = 'arroz-con-coco-negro';
-      if (!window.dishManager) window.dishManager = new DishDetailsManager();
-      document.getElementById('dish-root').innerHTML = window.dishManager.generateDishDetailHTML(dishId);
-    })();
-  </script>
+        <!-- Descripción Principal -->
+        <section class="dish-description-section">
+            <div class="page-container">
+                <div class="dish-card-visual featured">
+                    <div class="dish-card-content">
+                        <h2>A Caribbean Culinary Heritage</h2>
+                        <p>Our Arroz con Coco Negro is a celebration of Barranquilla's Afro-Caribbean roots. Made with locally sourced dark coconut cream that gives it its distinctive black color, this traditional dish combines perfectly cooked rice with the rich, nutty flavor of roasted coconut. Each grain is infused with aromatic coastal spices and finished with a touch of panela for authentic sweetness.</p>
+                    </div>
+                </div>
+
+                <!-- Grid de Características -->
+                <div class="features-container dish-features">
+                    <!-- Card 1: Ingredientes -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3>Premium Ingredients</h3>
+                        <ul class="feature-list">
+                            <li>Artisan black coconut cream (400ml)</li>
+                            <li>Long-grain jasmine rice (500g)</li>
+                            <li>Traditional panela sugar</li>
+                            <li>Aromatic coastal spices</li>
+                            <li>Fresh coconut shavings</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Maridajes -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-wine-glass"></i>
+                        </div>
+                        <h3>Perfect Pairings</h3>
+                        <ul class="feature-list">
+                            <li>Fried fish - Classic Caribbean combo</li>
+                            <li>Grilled chicken - Enhances coconut notes</li>
+                            <li>Fresh passion fruit juice - Tropical balance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Info Dietética -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3>Dietary Information</h3>
+                        <div class="dietary-content">
+                            <p><strong>Allergens:</strong> Coconut</p>
+                            <p><strong>Options:</strong> Vegan, Gluten-free</p>
+                            <p><strong>Calories:</strong> 380 kcal</p>
+                            <p><strong>Protein:</strong> 8g</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chef's Note -->
+                <div class="dish-card-visual chef-note">
+                    <div class="dish-card-content">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-hat-chef"></i>
+                        </div>
+                        <h3>Chef's Note</h3>
+                        <blockquote>
+                            "This dish requires patience and tradition. The secret is in slowly toasting the coconut to achieve that perfect dark color and deep flavor. We prepare it the way our grandmothers did in coastal Barranquilla."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Origen y Tradición -->
+                <div class="dish-card-visual origin">
+                    <div class="dish-card-content">
+                        <h3>Origin & Tradition</h3>
+                        <p>Arroz con Coco Negro has deep roots in the Afro-Caribbean communities of Colombia's Caribbean coast. This ancestral recipe represents the fusion of African culinary traditions with local ingredients, creating a dish that embodies the cultural richness of Barranquilla.</p>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="dish-actions">
+                    <a href="../index.html#menu" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Menu
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

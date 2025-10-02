@@ -223,7 +223,6 @@ p {
   align-items: center;
   min-height: 80vh;
   padding: var(--spacing-xxl) var(--spacing-lg);
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -308,7 +307,6 @@ p {
 }
 
 .features-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
