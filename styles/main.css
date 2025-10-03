@@ -248,6 +248,12 @@ p {
   background-clip: text;
 }
 
+.hero-title-dishes {
+  margin-bottom: var(--spacing-lg);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--text-secondary);

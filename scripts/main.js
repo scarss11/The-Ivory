@@ -11,7 +11,12 @@ class TheIvoryApp {
     this.setupEventListeners();
     this.setupScrollEffects();
     this.setupAnimations();
-    this.showPage('home');
+    this.handleInitialHash(); // Agregar esta línea
+
+    // Solo mostrar 'home' si no hay hash en la URL
+    if (!window.location.hash) {
+      this.showPage('home');
+    }
   }
 
   setupEventListeners() {
@@ -28,7 +33,7 @@ class TheIvoryApp {
     // Mobile menu toggle
     const hamburger = document.getElementById('nav-hamburger');
     const navMenu = document.getElementById('nav-menu');
-    
+
     if (hamburger) {
       hamburger.addEventListener('click', () => {
         this.toggleMobileMenu();
@@ -64,6 +69,23 @@ class TheIvoryApp {
           this.closeDishDetail();
         }
       });
+    }
+  }
+  // Agregar este método dentro de la clase TheIvoryApp, después del método init()
+  handleInitialHash() {
+    const hash = window.location.hash;
+
+    if (hash) {
+      // Remover el símbolo # y obtener el nombre de la página
+      const pageName = hash.substring(1);
+
+      // Verificar si es una página válida
+      const validPages = ['home', 'about', 'menu', 'contact'];
+
+      if (validPages.includes(pageName)) {
+        // Navegar a la página especificada en el hash
+        this.navigateToPage(pageName);
+      }
     }
   }
 
@@ -171,7 +193,7 @@ class TheIvoryApp {
     const pageEl = document.getElementById(`${pageId}-page`);
     if (pageEl) {
       pageEl.classList.add('active');
-      
+
       // Re-trigger animations for the new page
       setTimeout(() => {
         this.setupIntersectionObserver();
@@ -391,18 +413,18 @@ class TheIvoryApp {
         <div class="dish-ingredients">
           <h4>Premium Ingredients</h4>
           <div class="ingredients-list">
-            ${dish.ingredients.map(ingredient => 
-              `<div class="ingredient-item">${ingredient}</div>`
-            ).join('')}
+            ${dish.ingredients.map(ingredient =>
+      `<div class="ingredient-item">${ingredient}</div>`
+    ).join('')}
           </div>
         </div>
         
         <div class="dish-ingredients">
           <h4>Special Features</h4>
           <div class="ingredients-list">
-            ${dish.features.map(feature => 
-              `<div class="ingredient-item">${feature}</div>`
-            ).join('')}
+            ${dish.features.map(feature =>
+      `<div class="ingredient-item">${feature}</div>`
+    ).join('')}
           </div>
         </div>
       </div>
@@ -432,7 +454,40 @@ function closeDishDetail() {
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   window.app = new TheIvoryApp();
-  
+
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Add loading animation
+  document.body.classList.add('loaded');
+});
+// Modificar la sección final donde se inicializa la app:
+document.addEventListener('DOMContentLoaded', () => {
+  window.app = new TheIvoryApp();
+
+  // Manejar cambios en el hash
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const pageName = hash.substring(1);
+      const validPages = ['home', 'about', 'menu', 'contact'];
+      if (validPages.includes(pageName)) {
+        window.app.navigateToPage(pageName);
+      }
+    }
+  });
+
   // Add smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

@@ -1,360 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Ivory - Sophisticated Barranquilla Cuisine</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles/icons.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/icons.css" />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h1 class="logo-text">The Ivory</h1>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" data-page="home"><i class="fa-solid fa-utensils"></i> Home</a>
-                <a href="#about" class="nav-link" data-page="about"><i class="fa-solid fa-utensils"></i> About</a>
-                <a href="#menu" class="nav-link" data-page="menu"><i class="fa-solid fa-utensils"></i> Menu</a>
-                <a href="#contact" class="nav-link" data-page="contact"><i class="fa-solid fa-utensils"></i> Contact</a>
-            </div>
-            <div class="nav-hamburger" id="nav-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h1 class="logo-text">The Ivory</h1>
         </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link active" data-page="home"
+            ><i class="fa-solid fa-utensils"></i> Home</a
+          >
+          <a href="#about" class="nav-link" data-page="about"
+            ><i class="fa-solid fa-utensils"></i> About</a
+          >
+          <a href="#menu" class="nav-link" data-page="menu"
+            ><i class="fa-solid fa-utensils"></i> Menu</a
+          >
+          <a href="#contact" class="nav-link" data-page="contact"
+            ><i class="fa-solid fa-utensils"></i> Contact</a
+          >
+        </div>
+        <div class="nav-hamburger" id="nav-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Home Page -->
-        <section class="page active" id="home-page">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <h1 class="hero-title">Sophisticated Barranquilla Cuisine</h1>
-                    <p class="hero-subtitle">Experience the refined flavors of coastal Colombia at The Ivory</p>
-                    <button class="cta-button" onclick="navigateToPage('menu')">
-                        <span>Explore Menu</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-card">
-                        <div class="card-image-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.58L19 8l-9 9z" fill="#fff"/>
-                            </svg>
-                        </div>
-                        <h3>Premium Experience</h3>
-                        <p>Curated flavors from Barranquilla's finest ingredients</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our Dishes (moved here from menu) -->
-            <section class="home-dishes">
-                <div class="page-container">
-                    <h2 class="page-title">Our Dishes</h2>
-                    <p class="page-subtitle">A selection of signature plates crafted with coastal ingredients</p>
-
-                    <h3 class="section-subtitle">Our Dishes</h3>
-
-                    <div class="dishes-cards wide">
-                        <!-- Visual cards with images -->
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/Mariscos.png" alt="Cazuela de Mariscos" />
-                            <div class="dish-card-visual-info">
-                                <h4>Cazuela de Mariscos</h4>
-                                <p>Nuestra cazuela de mariscos es una sinfonía de sabores del Caribe, preparada con los mariscos más frescos y un caldo rico en especias locales que captura la esencia del mar.</p>
-                            </div>
-                        </div>
-
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/Pargo.png" alt="Pargo Rojo Grillado" />
-                            <div class="dish-card-visual-info">
-                                <h4>Pargo Rojo Grillado</h4>
-                                <p>Pargo rojo fresco a la parrilla, sazonado con hierbas caribeñas y servido con una guarnición de vegetales locales y limón.</p>
-                            </div>
-                        </div>
-
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/Arroz con coco.png" alt="Arroz con Coco Negro" />
-                            <div class="dish-card-visual-info">
-                                <h4>Arroz con Coco Negro</h4>
-                                <p>Una deliciosa interpretación del clásico arroz con coco, preparado con coco tostado y especias aromáticas que le dan su característico color oscuro y sabor único.</p>
-                            </div>
-                        </div>
-
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/Ceviche.png" alt="Ceviche Tropical" />
-                            <div class="dish-card-visual-info">
-                                <h4>Ceviche Tropical</h4>
-                                <p>Pescado fresco y mariscos marinados en cítricos tropicales, con un toque de cilantro, cebolla roja y ají, servido con chips de plátano.</p>
-                            </div>
-                        </div>
-
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/Sancocho.png" alt="Sancocho de Gallina" />
-                            <div class="dish-card-visual-info">
-                                <h4>Sancocho de Gallina</h4>
-                                <p>Un reconfortante caldo tradicional preparado con gallina criolla, tubérculos locales y verduras frescas, servido con arroz blanco y aguacate.</p>
-                            </div>
-                        </div>
-
-                        <div class="dish-card-visual">
-                            <img src="images/dishes/langostinos.png" alt="Langostinos al Ajillo" />
-                            <div class="dish-card-visual-info">
-                                <h4>Langostinos al Ajillo</h4>
-                                <p>Langostinos jugosos salteados en mantequilla de ajo, vino blanco y hierbas costeras, acompañados de arroz con coco.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section class="features">
-                <div class="features-container">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <!-- Chef Hat Icon - Replace with actual icon -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2c2.21 0 4 1.79 4 4 0 .74-.2 1.43-.55 2.03L16 8c1.1 0 2 .9 2 2v9c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-9c0-1.1.9-2 2-2l.55-.03C8.2 7.43 8 6.74 8 6c0-2.21 1.79-4 4-4z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Master Chefs</h3>
-                        <p>Expert culinary artisans bringing authentic Caribbean flavors to life</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <!-- Premium Ingredients Icon - Replace with actual icon -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Premium Ingredients</h3>
-                        <p>Sourced from the finest local markets and coastal waters</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <!-- Elegant Dining Icon - Replace with actual icon -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5l3.5 2.5L12 18.5 8.5 16z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Elegant Ambiance</h3>
-                        <p>Sophisticated atmosphere perfect for memorable dining experiences</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- About Page -->
-        <section class="page" id="about-page">
-            <div class="page-container">
-                <h2 class="page-title">About The Ivory</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="lead">Located in the heart of Barranquilla, The Ivory represents the pinnacle of Caribbean coastal cuisine, where traditional flavors meet contemporary sophistication.</p>
-                        <p>Our commitment to excellence drives every aspect of our culinary journey, from the careful selection of the freshest ingredients from local markets to the artful presentation of each dish. We celebrate the rich gastronomic heritage of Barranquilla while embracing modern culinary techniques.</p>
-                        <p>At The Ivory, we believe that dining is an experience that engages all the senses, creating memories that last a lifetime.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>15+</h3>
-                            <p>Years of Excellence</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>500+</h3>
-                            <p>Happy Guests Daily</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>25+</h3>
-                            <p>Signature Dishes</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Home Page -->
+      <section class="page active" id="home-page">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1 class="hero-title">Sophisticated Barranquilla Cuisine</h1>
+            <p class="hero-subtitle">
+              Experience the refined flavors of coastal Colombia at The Ivory
+            </p>
+            <button class="cta-button" onclick="navigateToPage('menu')">
+              <span>Explore Menu</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14m-7-7l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hero-image">
+            <div class="hero-card">
+              <div class="card-image-placeholder">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.58L19 8l-9 9z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+              <h3>Premium Experience</h3>
+              <p>Curated flavors from Barranquilla's finest ingredients</p>
             </div>
+          </div>
         </section>
 
-        <!-- Menu Page -->
-        <section class="page" id="menu-page">
-            <div class="page-container">
-                <h2 class="page-title">Our Signature Menu</h2>
-                <p class="page-subtitle">Discover the sophisticated flavors of Barranquilla</p>
-                
-                <!-- Visual cards removed from menu (moved to Home) -->
+        <!-- Our Dishes (moved here from menu) -->
+        <section class="home-dishes">
+          <div class="page-container">
+            <h2 class="page-title">Our Dishes</h2>
+            <p class="page-subtitle">
+              A selection of signature plates crafted with coastal ingredients
+            </p>
 
-                <div class="dishes-grid">
-                    <!-- Dish 1 -->
-                    <a class="dish-card" href="dishes/cazuela-de-mariscos.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Cazuela de Mariscos</h3>
-                            <p class="dish-description">Premium seafood casserole with coastal spices</p>
-                            <span class="dish-price">$45</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
+            <h3 class="section-subtitle">Our Dishes</h3>
 
-                    <!-- Dish 2 -->
-                    <a class="dish-card" href="dishes/pargo-rojo-grillado.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Pargo Rojo Grillado</h3>
-                            <p class="dish-description">Grilled red snapper with Caribbean herbs</p>
-                            <span class="dish-price">$38</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
-
-                    <!-- Dish 3 -->
-                    <a class="dish-card" href="dishes/arroz-con-coco-negro.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Arroz con Coco Negro</h3>
-                            <p class="dish-description">Black coconut rice with premium ingredients</p>
-                            <span class="dish-price">$28</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
-
-                    <!-- Dish 4 -->
-                    <a class="dish-card" href="dishes/ceviche-tropical.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Ceviche Tropical</h3>
-                            <p class="dish-description">Fresh seafood marinated in tropical citrus</p>
-                            <span class="dish-price">$32</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
-
-                    <!-- Dish 5 -->
-                    <a class="dish-card" href="dishes/sancocho-de-gallina.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Sancocho de Gallina</h3>
-                            <p class="dish-description">Traditional chicken stew elevated with premium ingredients</p>
-                            <span class="dish-price">$35</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
-
-                    <!-- Dish 6 -->
-                    <a class="dish-card" href="dishes/langostinos-al-ajillo.html">
-                        <div class="dish-image">
-                            <div class="image-placeholder">
-                                <i class="fa-solid fa-bowl-food"></i>
-                            </div>
-                        </div>
-                        <div class="dish-info">
-                            <h3 class="dish-name">Langostinos al Ajillo</h3>
-                            <p class="dish-description">Garlic prawns with coastal herbs and spices</p>
-                            <span class="dish-price">$42</span>
-                        </div>
-                        <div class="dish-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </a>
+            <div class="dishes-cards wide">
+              <!-- Visual cards with images -->
+              <div class="dish-card-visual">
+                <img
+                  src="images/dishes/Mariscos.png"
+                  alt="Cazuela de Mariscos"
+                />
+                <div class="dish-card-visual-info">
+                  <h4>Cazuela de Mariscos</h4>
+                  <p>
+                    Our seafood casserole is a symphony of Caribbean flavors,
+                    prepared with the freshest seafood and a rich broth infused
+                    with local spices that captures the essence of the sea.
+                  </p>
                 </div>
+              </div>
+
+              <div class="dish-card-visual">
+                <img src="images/dishes/Pargo.png" alt="Pargo Rojo Grillado" />
+                <div class="dish-card-visual-info">
+                  <h4>Pargo Rojo Grillado</h4>
+                  <p>
+                    Fresh grilled red snapper, seasoned with Caribbean herbs and
+                    served with a side of local vegetables and lemon.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dish-card-visual">
+                <img
+                  src="images/dishes/Arroz con coco.png"
+                  alt="Arroz con Coco Negro"
+                />
+                <div class="dish-card-visual-info">
+                  <h4>Arroz con Coco Negro</h4>
+                  <p>
+                    A delicious interpretation of classic coconut rice, prepared
+                    with toasted coconut and aromatic spices that give it its
+                    characteristic dark color and unique flavor.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dish-card-visual">
+                <img src="images/dishes/Ceviche.png" alt="Ceviche Tropical" />
+                <div class="dish-card-visual-info">
+                  <h4>Ceviche Tropical</h4>
+                  <p>
+                    Fresh fish and seafood marinated in tropical citrus, with a
+                    touch of cilantro, red onion, and chili pepper, served with
+                    plantain chips.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dish-card-visual">
+                <img
+                  src="images/dishes/Sancocho.png"
+                  alt="Sancocho de Gallina"
+                />
+                <div class="dish-card-visual-info">
+                  <h4>Sancocho de Gallina</h4>
+                  <p>
+                    A comforting traditional broth prepared with free-range
+                    chicken, local tubers, and fresh vegetables, served with
+                    white rice and avocado.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dish-card-visual">
+                <img
+                  src="images/dishes/langostinos.png"
+                  alt="Langostinos al Ajillo"
+                />
+                <div class="dish-card-visual-info">
+                  <h4>Langostinos al Ajillo</h4>
+                  <p>
+                    Succulent prawns sautéed in garlic butter, white wine, and
+                    coastal herbs, accompanied by coconut rice.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
 
-        <!-- Contact Page -->
-        <section class="page" id="contact-page">
-            <div class="page-container">
-                <h2 class="page-title">Contact Us</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <h3>Visit Us</h3>
-                            <p>Carrera 52 #76-45<br>Barranquilla, Colombia</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Call Us</h3>
-                            <p>+57 5 123-4567</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Email</h3>
-                            <p>reservations@theivory.co</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Hours</h3>
-                            <p>Mon-Thu: 6:00 PM - 11:00 PM<br>Fri-Sat: 6:00 PM - 12:00 AM<br>Sun: Closed</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Features Section -->
+        <section class="features">
+          <div class="features-container">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <!-- Chef Hat Icon - Replace with actual icon -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2c2.21 0 4 1.79 4 4 0 .74-.2 1.43-.55 2.03L16 8c1.1 0 2 .9 2 2v9c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-9c0-1.1.9-2 2-2l.55-.03C8.2 7.43 8 6.74 8 6c0-2.21 1.79-4 4-4z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Master Chefs</h3>
+              <p>
+                Expert culinary artisans bringing authentic Caribbean flavors to
+                life
+              </p>
             </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <!-- Premium Ingredients Icon - Replace with actual icon -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Premium Ingredients</h3>
+              <p>Sourced from the finest local markets and coastal waters</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <!-- Elegant Dining Icon - Replace with actual icon -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5l3.5 2.5L12 18.5 8.5 16z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Elegant Ambiance</h3>
+              <p>
+                Sophisticated atmosphere perfect for memorable dining
+                experiences
+              </p>
+            </div>
+          </div>
         </section>
+      </section>
+
+      <!-- About Page -->
+      <section class="page" id="about-page">
+        <div class="page-container">
+          <h2 class="page-title">About The Ivory</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p class="lead">
+                Located in the heart of Barranquilla, The Ivory represents the
+                pinnacle of Caribbean coastal cuisine, where traditional flavors
+                meet contemporary sophistication.
+              </p>
+              <p>
+                Our commitment to excellence drives every aspect of our culinary
+                journey, from the careful selection of the freshest ingredients
+                from local markets to the artful presentation of each dish. We
+                celebrate the rich gastronomic heritage of Barranquilla while
+                embracing modern culinary techniques.
+              </p>
+              <p>
+                At The Ivory, we believe that dining is an experience that
+                engages all the senses, creating memories that last a lifetime.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3>15+</h3>
+                <p>Years of Excellence</p>
+              </div>
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Happy Guests Daily</p>
+              </div>
+              <div class="stat-item">
+                <h3>25+</h3>
+                <p>Signature Dishes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Page -->
+      <section class="page" id="menu-page">
+        <div class="page-container">
+          <h2 class="page-title">Our Signature Menu</h2>
+          <p class="page-subtitle">
+            Discover the sophisticated flavors of Barranquilla
+          </p>
+
+          <!-- Visual cards removed from menu (moved to Home) -->
+
+          <div class="dishes-grid">
+            <!-- Dish 1 -->
+            <a class="dish-card" href="dishes/cazuela-de-mariscos.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Cazuela de Mariscos</h3>
+                <p class="dish-description">
+                  Premium seafood casserole with coastal spices
+                </p>
+                <span class="dish-price">$45</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Dish 2 -->
+            <a class="dish-card" href="dishes/pargo-rojo-grillado.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Pargo Rojo Grillado</h3>
+                <p class="dish-description">
+                  Grilled red snapper with Caribbean herbs
+                </p>
+                <span class="dish-price">$38</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Dish 3 -->
+            <a class="dish-card" href="dishes/arroz-con-coco-negro.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Arroz con Coco Negro</h3>
+                <p class="dish-description">
+                  Black coconut rice with premium ingredients
+                </p>
+                <span class="dish-price">$28</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Dish 4 -->
+            <a class="dish-card" href="dishes/ceviche-tropical.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Ceviche Tropical</h3>
+                <p class="dish-description">
+                  Fresh seafood marinated in tropical citrus
+                </p>
+                <span class="dish-price">$32</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Dish 5 -->
+            <a class="dish-card" href="dishes/sancocho-de-gallina.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Sancocho de Gallina</h3>
+                <p class="dish-description">
+                  Traditional chicken stew elevated with premium ingredients
+                </p>
+                <span class="dish-price">$35</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Dish 6 -->
+            <a class="dish-card" href="dishes/langostinos-al-ajillo.html">
+              <div class="dish-image">
+                <div class="image-placeholder">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+              </div>
+              <div class="dish-info">
+                <h3 class="dish-name">Langostinos al Ajillo</h3>
+                <p class="dish-description">
+                  Garlic prawns with coastal herbs and spices
+                </p>
+                <span class="dish-price">$42</span>
+              </div>
+              <div class="dish-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18l6-6-6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Page -->
+      <section class="page" id="contact-page">
+        <div class="page-container">
+          <h2 class="page-title">Contact Us</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>Visit Us</h3>
+                <p>Carrera 52 #76-45<br />Barranquilla, Colombia</p>
+              </div>
+              <div class="contact-item">
+                <h3>Call Us</h3>
+                <p>+57 5 123-4567</p>
+              </div>
+              <div class="contact-item">
+                <h3>Email</h3>
+                <p>reservations@theivory.co</p>
+              </div>
+              <div class="contact-item">
+                <h3>Hours</h3>
+                <p>
+                  Mon-Thu: 6:00 PM - 11:00 PM<br />Fri-Sat: 6:00 PM - 12:00
+                  AM<br />Sun: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Dish Detail Modal -->
     <div class="modal" id="dish-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close" onclick="closeDishDetail()">&times;</button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Content will be loaded dynamically -->
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="modal-close" onclick="closeDishDetail()">
+            &times;
+          </button>
         </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Content will be loaded dynamically -->
+        </div>
+      </div>
     </div>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/components.js"></script>
     <script src="scripts/dishDetails.js"></script>
-</body>
+  </body>
 </html>
